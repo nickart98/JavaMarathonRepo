@@ -6,13 +6,12 @@ public class Task3 {
     public static void main(String[] args) {
         System.out.println("Задайте границы диапазона: ");
         Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextInt();
+        int a = scanner.nextInt() + 1;
         int b = scanner.nextInt();
-        int i = a + 1;
-        while (i < b) {
-            if (i % 5 == 0 && i % 10 != 0)
-                System.out.println(i + " ");
-            i++;
+        while (a < b) {
+            if (a % 5 == 0 && a % 10 != 0)
+                System.out.println(a + " ");
+            a++;
         }
 
     }
