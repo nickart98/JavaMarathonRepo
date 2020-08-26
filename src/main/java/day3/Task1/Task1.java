@@ -5,10 +5,13 @@ import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String city;
-        do {
+        while (true){
             System.out.println("Введите город: ");
-            city = scanner.nextLine();
+            String city = scanner.nextLine();
+            if (city.equals("Stop")) {
+                System.out.println("Bye-bye!");
+                break;
+            }
             switch (city) {
                 case "Москва":
                 case "Ростов":
@@ -30,14 +33,10 @@ public class Task1 {
                 case "Кельн":
                     System.out.println("Германия");
                     break;
-                case "Stop":
-                    System.out.println("Bye-bye!");
-                    break;
                 default:
                     System.out.println("Неизвестная страна");
                     break;
             }
         }
-        while (!city.equals("Stop"));
     }
 }
