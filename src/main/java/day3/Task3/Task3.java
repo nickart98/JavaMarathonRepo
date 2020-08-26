@@ -9,8 +9,10 @@ public class Task3 {
             System.out.println("Введите числа: ");
             double a = scanner.nextDouble();
             double b = scanner.nextDouble();
-            if (b == 0)
+            if (b == 0) {
                 System.out.println("Деление на 0");
+                i -=1;
+            }
             if (b != 0)
             System.out.println("a / b = " + a/b);
         }
