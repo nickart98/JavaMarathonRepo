@@ -10,8 +10,6 @@ public class Player {
         this.stamina = stamina;
         if (countPlayers < 6)
         countPlayers++;
-        else
-            countPlayers = 6;
     }
 
 
@@ -19,14 +17,13 @@ public class Player {
         if (stamina > MIN_STAMINA) {
             stamina--;
         }
-        if (stamina == MIN_STAMINA || stamina == 1)
+        if (stamina == MIN_STAMINA || stamina == 1) {
             System.out.println("Из игры выбыл 1 игрок");
-        countPlayers--;
-        System.out.println(countPlayers);
+            countPlayers--;
+        }
     }
 
     public static void info() {
-        System.out.println(countPlayers);
         switch (countPlayers) {
             case 2:
             case 3:
