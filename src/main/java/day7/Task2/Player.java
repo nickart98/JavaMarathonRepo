@@ -1,6 +1,5 @@
 package day7.Task2;
 
-import java.util.Scanner;
 
 public class Player {
     private static int stamina, countPlayers;
