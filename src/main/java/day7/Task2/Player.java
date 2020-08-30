@@ -4,7 +4,6 @@ package day7.Task2;
 public class Player {
     private static int stamina, countPlayers;
     public final static int MAX_STAMINA = 100, MIN_STAMINA = 0;
-    static int i;
     private static int[] players = new int[6];
 
     public Player(int stamina) {
@@ -19,9 +18,10 @@ public class Player {
         players[3] = player4.stamina;
         players[4] = player5.stamina;
         players[5] = player6.stamina;
-        for (int i = 0; i < players.length; i++) {
+        for (int numberOfPlayers = 0; numberOfPlayers < players.length; numberOfPlayers++) {
             countPlayers++;
         }
+        if (countPlayers > 6) countPlayers = 6;
         System.out.println("В игру вошло " + countPlayers + " игроков");
     }
 
