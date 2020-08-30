@@ -8,7 +8,7 @@ public class Player {
     public final static int MAX_STAMINA = 100, MIN_STAMINA = 0;
     static int i;
     private static int[] players = new int[6];
-    
+
 
     public static void counter() {
         Random rd = new Random();
