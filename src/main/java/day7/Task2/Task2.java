@@ -12,7 +12,7 @@ public class Task2 {
         Player player5 = new Player(rd.nextInt(10) + 90);
         Player player6 = new Player(rd.nextInt(10) + 90);
         Player.info();
-        Player.run();
+        player1.run();
         Player.info();
 
     }
