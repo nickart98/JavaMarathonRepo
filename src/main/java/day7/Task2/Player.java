@@ -1,35 +1,28 @@
 package day7.Task2;
 
+import java.util.Scanner;
 
 public class Player {
     private static int stamina, countPlayers;
     public final static int MAX_STAMINA = 100, MIN_STAMINA = 0;
-    private static int[] players = new int[6];
+
+    public static void main(String[] args) {
+        if (countPlayers<6)
+        countPlayers++;
+        else System.out.println("Обе команды укомплектованы");
+    }
 
     public Player(int stamina) {
         this.stamina = stamina;
     }
 
 
-    public static void counter(Player player1, Player player2, Player player3, Player player4, Player player5, Player player6) {
-        players[0] = player1.stamina;
-        players[1] = player2.stamina;
-        players[2] = player3.stamina;
-        players[3] = player4.stamina;
-        players[4] = player5.stamina;
-        players[5] = player6.stamina;
-        for (int numberOfPlayers = 0; numberOfPlayers < players.length; numberOfPlayers++) {
-            countPlayers++;
-        }
-        if (countPlayers > 6) countPlayers = 6;
-        System.out.println("В игру вошло " + countPlayers + " игроков");
-    }
-
-    public static void run(Player player1, Player player2, Player player3, Player player4, Player player5, Player player6) {
-        while (stamina > MIN_STAMINA) {
+    public static void run() {
+        if (stamina > MIN_STAMINA) {
             stamina--;
         }
-        System.out.println("Из игры выбыл 1 игрок");
+        if (stamina == MIN_STAMINA)
+            System.out.println("Из игры выбыл 1 игрок");
         countPlayers--;
     }
 
@@ -48,7 +41,7 @@ public class Player {
                 System.out.println("Команды неполные, есть еще " + (6 - countPlayers) + " свободное место");
                 break;
             default:
-                System.out.println("Команды полные");
+                System.out.println("Обе команды укомплектованы");
                 break;
         }
     }
