@@ -1,18 +1,17 @@
 package day7.Task2;
 
 public class Player {
-    private static int  countPlayers;
+    private static int countPlayers;
     private int stamina;
     public final static int MAX_STAMINA = 100, MIN_STAMINA = 0;
 
-    public static void main(String[] args) {
-        if (countPlayers<6)
-        countPlayers++;
-        else System.out.println("Обе команды укомплектованы");
-    }
 
     public Player(int stamina) {
         this.stamina = stamina;
+        if (countPlayers < 6)
+        countPlayers++;
+        else
+            countPlayers = 6;
     }
 
 
@@ -20,12 +19,14 @@ public class Player {
         if (stamina > MIN_STAMINA) {
             stamina--;
         }
-        if (stamina == MIN_STAMINA)
+        if (stamina == MIN_STAMINA || stamina == 1)
             System.out.println("Из игры выбыл 1 игрок");
         countPlayers--;
+        System.out.println(countPlayers);
     }
 
     public static void info() {
+        System.out.println(countPlayers);
         switch (countPlayers) {
             case 2:
             case 3:
